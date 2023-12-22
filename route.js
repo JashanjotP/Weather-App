@@ -1,4 +1,3 @@
-"use strict";
 
 import {updateWeather, error404} from "./app.js";
 
@@ -7,6 +6,7 @@ const defaultLocation = "#/weather?lat=43.6532&lon=-79.3832";
 const currentLocation = function () {
     window.navigator.geolocation.getCurrentPosition(res => {
         const {latitude, longitude} = res.coords;
+        console.log("In")
         updateWeather(`lat=${latitude}`,`&lon=${longitude}`);
     }, err => {
         window.location.hash = defaultLocation
@@ -21,7 +21,7 @@ const routes = new Map([
 ]);
 
 const checkHash = function (){
-    const requestURL = window.location.slice(1);
+    const requestURL = window.location.hash.slice(1);
 
     const [route, query] = requestURL.includes ? requestURL.split("?") : [requestURL];
 
