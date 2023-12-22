@@ -1,3 +1,4 @@
+"use strict";
 
 import {updateWeather, error404} from "./app.js";
 

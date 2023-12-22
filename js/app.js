@@ -1,4 +1,4 @@
-
+"use strict";
 
 import {fetchData, url} from "./api.js"
 import * as module from './module.js'
@@ -48,7 +48,7 @@ searchField.addEventListener("input", function() {
                     searchItem.classList.add("view-item");
 
                     searchItem.innerHTML = `
-                    <span class="m-icon">location_on</span>
+                    <span class="material-symbols-outlined">location_on</span>
                         <div>
                             <p class="item-title">${name}</p>
                             <p class="label-2 item-subtitle">${state || ""}, ${country}</p>
@@ -122,12 +122,12 @@ export const updateWeather = function (lat, lon) {
     <ul class="meta-list">
 
         <li class="meta-item">
-            <span class="m-icon">calendar_today</span>
+            <span class="material-symbols-outlined">calendar_today</span>
             <p class="title-3 meta-text">${module.getDate(dateUnix, timezone)}</p>
         </li>
 
         <li class="meta-item">
-            <span class="m-icon">location_on</span>
+            <span class="material-symbols-outlined">location_on</span>
             <p class="title-3 meta-text" data-location></p>
         </li>
     </ul>
@@ -155,7 +155,7 @@ export const updateWeather = function (lat, lon) {
                 <div class="card card-sm highlight-card one">
                     <h3 class="title-3">Air Quality Index</h3>
                     <div class="wrapper">
-                        <span class="m-icon">air</span>
+                        <span class="material-symbols-outlined">air</span>
                         <ul class="card-list">
                             <li class="card-item">
                                 <p class="title-1">${pm2_5.toPrecision(3)}</p>
@@ -184,15 +184,15 @@ export const updateWeather = function (lat, lon) {
                 <div class="card card-sm highlight-card two">
                     <h3 class="title-3">Sunrise & Sunset</h3>
                     <div class="card-list">
-                        <div class="card-items">
-                            <span class="m-icon">clear_day</span>
+                        <div class="card-item" id="sun">
+                            <span class="material-symbols-outlined">clear_day</span>
                             <div>
                                 <p class="label-1">Sunrise</p>
                                 <p class="title-1">${module.getTime(sunriseUnixUTC, timezone)}</p>
                             </div>
                         </div>
-                        <div class="card-items">
-                            <span class="m-icon">clear_night</span>
+                        <div class="card-item">
+                            <span class="material-symbols-outlined">clear_night</span>
                             <div>
                                 <p class="label-1">Sunset</p>
                                 <p class="title-1">${module.getTime(sunsetUnixUTC, timezone)}</p>
@@ -204,7 +204,7 @@ export const updateWeather = function (lat, lon) {
                 <div class="card card-sm highlight-card">
                     <h3 class="title-3">Humidity</h3>
                     <div class="wrapper">
-                        <span class="m-icon">humidity_percentage</span>
+                        <span class="material-symbols-outlined">humidity_percentage</span>
                         <p class="title-1">${humidity}<sup>%</sup></p>
                     </div>
                 </div>
@@ -212,7 +212,7 @@ export const updateWeather = function (lat, lon) {
                 <div class="card card-sm highlight-card">
                     <h3 class="title-3">Pressure</h3>
                     <div class="wrapper">
-                        <span class="m-icon">airwave</span>
+                        <span class="material-symbols-outlined">airwave</span>
                         <p class="title-1">${pressure}<sup>hPa</sup></p>
                     </div>
                 </div>
@@ -230,7 +230,7 @@ export const updateWeather = function (lat, lon) {
                 <div class="card card-sm highlight-card">
                     <h3 class="title-3">Feels Like</h3>
                     <div class="wrapper">
-                        <span class="m-icon">thermostat</span>
+                        <span class="material-symbols-outlined">thermostat</span>
                         <p class="title-1">${parseInt(feels_like)}&deg;<sup>c</sup></p>
                     </div>
                 </div>
@@ -338,6 +338,4 @@ export const updateWeather = function (lat, lon) {
     });
 }
 
-export const error404 = function() {
-
-}
+export const error404 = () => errorContent.style.display = "flex";

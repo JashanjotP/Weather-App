@@ -23,9 +23,9 @@
             <div class="search-view" data-search-view >
                 <div class="search-wrapper">
                     <input type="search" name="search" placeholder="Search City..." autocomplete="off" class="search-field" data-search-field>
-                    <span class="m-icon leading-icon">search</span>
+                    <span class="material-symbols-outlined leading-icon" id="mob">search</span>
                     <button class="icon-btn leading-icon has-state" aria-label="close search" data-search-toggler>
-                        <span class="m-icon">arrow_back</span>
+                        <span class="material-symbols-outlined">arrow_back</span>
                     </button>
                 </div>
                 <div class="search-result" data-search-result>
@@ -33,10 +33,10 @@
             </div>
             <div class="header-actions">
                 <button class="icon-btn has-state" aria-label="open search" data-search-toggler>
-                    <span class="m-icon icon">search</span>
+                    <span class="material-symbols-outlined icon">search</span>
                 </button>
                 <a href="#/current-location" class="btn-primary has-state" data-current-location-btn>
-                    <span class="m-icon">my_location</span>
+                    <span class="material-symbols-outlined">my_location</span>
                     <span class="span">Current Location</span>
                 </a>
             </div>
@@ -55,7 +55,7 @@
                 </section>
             </div>
               
-            <div class="content-right">
+            <div class="content-right" >
                 <section class="section highlights" aria-labelledby="highlights-label" data-highlights>
                     
 
@@ -74,13 +74,13 @@
     <section class="error-content" data-error-content>
         <h2 class="heading">404</h2>
         <p class="body-1">Page not found!</p>
-        <a href="#" class="btn-primary">
+        <a href="#/weather?lat=43.6532&lon=-79.3832" class="btn-primary">
             <span class="span">Go Home!</span>
         </a>
     </section>
 
 
-    <script src="app.js" type="module"></script>
-    <script src="route.js" type="module"></script>
+    <script src="./js/app.js" type="module"></script>
+    <script src="./js/route.js" type="module"></script>
 </body>
 </html>
