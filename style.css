@@ -435,14 +435,6 @@ body {
 
 
 
-
-
-
-
-/*-----------------------------------*\
-  #MAIN
-\*-----------------------------------*/
-
 main {
   height: calc(100vh - 80px);
   height: calc(100svh - 80px);   /*for mobile browsers*/
@@ -484,14 +476,6 @@ article.container::before {
 
 
 
-
-
-
-
-/*-----------------------------------*\
-  #CURRENT WEATHER
-\*-----------------------------------*/
-
 .current-weather-card .wrapper {
   margin-block: 12px;
   display: flex;
@@ -525,11 +509,6 @@ article.container::before {
 
 
 
-
-/*-----------------------------------*\
-  #HIGHLIGHTS
-\*-----------------------------------*/
-
 .forecast-card .title-2 { margin-block-end: 0; }
 
 .forecast-card :is(.card-item, .icon-wrapper) {
@@ -552,15 +531,6 @@ article.container::before {
 }
 
 
-
-
-
-
-
-
-/*-----------------------------------*\
-  #HOURLY FORECAST
-\*-----------------------------------*/
 
 .highlights .m-icon { font-size: 3.2rem; }
 
@@ -651,12 +621,6 @@ article.container::before {
 
 
 
-
-
-/*-----------------------------------*\
-  #FORECAST
-\*-----------------------------------*/
-
 .slider-container {
   overflow-x: auto;
   margin-inline: -16px;
@@ -692,14 +656,6 @@ article.container::before {
 
 
 
-
-
-
-
-/*-----------------------------------*\
-  #LOADING
-\*-----------------------------------*/
-
 .loading {
   position: absolute;
   top: 0;
@@ -727,13 +683,6 @@ article.container::before {
 
 
 
-
-
-
-/*-----------------------------------*\
-  #ERROR SECTION
-\*-----------------------------------*/
-
 .error-content {
   position: fixed;
   top: 0;
@@ -754,44 +703,6 @@ article.container::before {
 
 
 
-
-
-
-
-/*-----------------------------------*\
-  #FOOTER
-\*-----------------------------------*/
-
-.footer,
-.footer .body-3:last-child {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: center;
-}
-
-.footer {
-  color: var(--on-surface-variant);
-  text-align: center;
-  gap: 12px 24px;
-  margin-block-start: 20px;
-  display: none;
-}
-
-.fade-in .footer { display: flex; }
-
-.footer .body-3:last-child { gap: 6px; }
-
-
-
-
-
-
-
-
-/*-----------------------------------*\
-  #ANIMATION
-\*-----------------------------------*/
 
 @keyframes ripple {
   0% {
@@ -817,19 +728,8 @@ article.container::before {
 }
 
 
-
-
-
-
-
-/*-----------------------------------*\
-  #MEDIA QUERIES
-\*-----------------------------------*/
-
-/* for >768px screens */
 @media (min-width: 769px) {
 
-  /* REUSED STYLE */
   .container { padding: 24px; }
 
   .title-1 {--title-1: 2.4rem}
@@ -850,8 +750,6 @@ article.container::before {
   }
 
 
-
-  /* HEADER */
   .header-actions { gap: 24px; }
 
   .header .btn-primary { padding-inline: 16px 24px; }
@@ -861,8 +759,6 @@ article.container::before {
   .search-view { clip-path: circle(3% at calc(100% - 273px) 6%);}
   
 
-
-  /* MAIN */
   main {
     height: calc(100vh - 96px);
     height: calc(100svh - 96px);
@@ -914,22 +810,18 @@ article.container::before {
   .hourly-forecast .card-sm { padding: 16px; }
 }
 
-
-/* for >1200px screens */
 @media (min-width: 1200px) {
-  /* CUSTOM PROPERTY */
+
   #mob{
     display:block;
   }
   :root {
 
-    /* font-size */
     --heading: 8rem;
     --title-2: 2rem;
   }
 
 
-  /* REUSED STYLES */
   .container { padding: 40px; }
 
   .card-lg { padding: 36px; }
@@ -941,8 +833,6 @@ article.container::before {
   .highlight-card.two .card-item { column-gap: 24px; }
 
 
-
-  /* HEADER */
   .header .icon-btn { display: none; }
 
   .logo img { width: 200px; }
@@ -1038,8 +928,6 @@ article.container::before {
   .slider-list { gap: 16px; }
 }
 
-
-/* for >1400px screens */
 @media (min-width: 1400px) {
   .highlight-list { grid-template-columns: repeat(4, 1fr); }
 }
